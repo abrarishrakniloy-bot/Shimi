@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Shimi 🎂</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  font-family: 'Segoe UI', sans-serif;
+  overflow:hidden;
+}
+.container{
+  text-align:center;
+}
+.gift{
+  font-size:100px;
+  cursor:pointer;
+  animation:bounce 1.5s infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+.string{
+  margin-top:10px;
+  font-size:18px;
+  cursor:pointer;
+  color:#333;
+}
+.hidden{
+  display:none;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  animation:fadeIn 1s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.8)}
+  to{opacity:1; transform:scale(1)}
+}
+.cake{
+  font-size:90px;
+}
+h1{
+  margin:10px 0;
+  color:#ff5f7e;
+}
+p{
+  font-size:16px;
+  color:#333;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div id="giftBox">
+    <div class="gift">🎁</div>
+    <div class="string">pull the string 🧵</div>
+  </div>
+
+  <div id="card" class="card hidden">
+    <div class="cake">🎂</div>
+    <h1>Happy Birthday Shimi 💖</h1>
+    <p>
+      Happy birthday chashmish 🤓 <br><br>
+      Another year older, still the same adorable troublemaker 😌  
+      May your days be full of laughs, random smiles,  
+      and moments that melt your heart just like this song 🎶  
+      <br><br>
+      Stay happy, stay you. Today is all about celebrating YOU ✨
+    </p>
+  </div>
+</div>
+
+<audio id="song" preload="auto">
+  <source src="melting.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.getElementById("giftBox").onclick = function(){
+  document.getElementById("giftBox").classList.add("hidden");
+  document.getElementById("card").classList.remove("hidden");
+  document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
